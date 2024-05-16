@@ -123,30 +123,34 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
 
 ### 4 grep options
 
-1. `grep -r`: search recursively
+1. `grep -r`: search recursively. It is useful for searching in all text files that are nested within directories.
 
-   a. ex: `grep -r "gaming"`
+   i. source: https://www.gnu.org/software/grep/manual/grep.html
+
+   a. ex: `grep -r "monkeys is"` It is finding the occurrences of "monkeys is" in each file in the nested directories.
 
    ```
-   > grep -r "gaming"
-   ./rat.txt:mr beast gaming
-   ./911report/chapter-13.3.txt:                algorithm and gaming the system. On no-fly lists, see FAA security directive,
+   > grep -r "monkeys is"
+   ./biomed/1471-2210-1-7.txt:        rats, mice and monkeys is well documented (for review see
    ```
 
-   b. ex: `grep -r "among us"`
+   b. ex: `grep -r "among us"` This finds all occurrences of among us within each nested directory.
 
    ```
    > grep -r "among us"
-   ./government/Post_Rate_Comm/ReportToCongress2002WEB.txt:unreasonable discrimination among users of the mails, nor shall it
+   ./government/Post_Rate_Comm/ReportToCongress2002WEB.
+   txt:unreasonable discrimination among users of the mails, nor shall it
    ./biomed/1471-2261-3-5.txt:        clinically diagnosed valve disease among users of
    ```
 
-2. `grep -i`: ignore case
+2. `grep -i`: ignore case. This is useful if you do not care about whether a pattern is capitalized or not. This provide a broader search for what you are looking for.
 
-   a. ex: `grep -ri "MIlwaukeE"`
+   i. source: https://www.gnu.org/software/grep/manual/grep.html
+
+   a. ex: `grep -i "MIlwaukeE"` This finds all occurrences of milwaukee whether or not any of the leters are cpaitalized or not.
 
    ```
-   > grep -ri "MIlwaukeE"
+   > grep -i "MIlwaukeE"
    ./government/About_LSC/Strategic_report.txt:(Milwaukee)
    ./government/About_LSC/Strategic_report.txt:NLADA Annual Conference in Milwaukee to showcase best practices in
    ./plos/pmed.0010066.txt:          MRI was performed at 1.5 T (System 9X, General Electric Medical Systems, Milwaukee,
@@ -157,10 +161,10 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    ./biomed/1471-2121-3-21.txt:          2 ) was from Aldrich (Milwaukee, WI).
    ```
 
-   b. ex: `grep -ri "RIZz"`
+   b. ex: `grep -i "RIZz"` This finds all occurrences of the substring rizz in any file regardless of case.
 
    ```
-   > grep -ri "RIZz"
+   > grep -i "RIZz"
    ./government/Media/pro_bono_efforts.txt:By Russ Rizzo
    ./biomed/ar331.txt:        51]. Zhao and colleagues [ 52] identified frizzled (denoted
    ./biomed/ar331.txt:        Of potential importance is the fact that frizzled family
@@ -171,12 +175,14 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    ...
    ```
 
-3. `grep -w`: search for whole word, not substring
+3. `grep -w`: search for whole word, not substring. This is useful when you want to search for the exact word insated of having it a part of a substring.
 
-   a. ex: `grep -rw "cysteine protease"`
+   i. source: https://www.gnu.org/software/grep/manual/grep.html
+
+   a. ex: `grep -w "cysteine protease"` finds the two words together cystein protease.
 
    ```
-   > grep -rw "cysteine protease"
+   > grep -w "cysteine protease"
    ./plos/journal.pbio.0020013.txt:        for the proteasome, in addition to “classic” cysteine protease behavior (Verma et al. 2002;
    ./biomed/1476-4598-2-25.txt:          Cathepsin B is a lysosomal cysteine protease, the
    ./biomed/1476-4598-2-25.txt:          cysteine protease. The cleavage of calpastatin by
@@ -188,20 +194,22 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    ./biomed/gb-2003-4-2-r9.txt:            these include a cysteine protease, falcipain-2
    ```
 
-   b. ex: `grep -rw "explode"`
+   b. ex: `grep -w "explode"` Finds the exact match for the word explode.
 
    ```
-   > grep -rw "explode"
+   > grep -w "explode"
    ./biomed/cc2190.txt:          enteral nutrition (explode) AND jejunal or post-pyloric
    ./911report/chapter-6.txt:                hit tanks, not people. It needed to be designed to explode in a different way, and
    ```
 
-4. `grep -l`: display file names which contain line matches
+4. `grep -l`: display file names which contain line matches. This is useful when you want to find the files that include the information that you want.
 
-   a. ex: `grep -rl "toilet"`
+   i. source: https://www.gnu.org/software/grep/manual/grep.html
+
+   a. ex: `grep -l "toilet"` This finds all the files that contain toilet. These names of the files can be used for further processing.
 
    ```
-   > grep -rl "toilet"
+   > grep -l "toilet"
    ./government/Media/Farm_workers.txt
    ./government/Media/Bridging_legal_aid_gap.txt
    ./biomed/1471-2458-3-2.txt
@@ -210,9 +218,9 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    ./911report/chapter-6.txt
    ```
 
-   b. ex: `grep -ril "killed.*air strike"`
+   b. ex: `grep -l "killed.*air strike"` This finds the pattern of killed air strike and returns the names of all the files that contain this pattern.
 
    ```
-   > grep -ril "killed.*air strike"
+   > grep -l "killed.*air strike"
    ./911report/chapter-10.txt
    ```
