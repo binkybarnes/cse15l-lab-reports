@@ -153,8 +153,10 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    > grep -i "MIlwaukeE"
    ./government/About_LSC/Strategic_report.txt:(Milwaukee)
    ./government/About_LSC/Strategic_report.txt:NLADA Annual Conference in Milwaukee to showcase best practices in
-   ./plos/pmed.0010066.txt:          MRI was performed at 1.5 T (System 9X, General Electric Medical Systems, Milwaukee,
-   ./biomed/1471-2180-2-22.txt:          (Milwaukee, WI). Nicotinamide-adenine dinucleotide (NAD),
+   ./plos/pmed.0010066.txt:          MRI was performed at 1.5 T
+   (System 9X, General Electric Medical Systems, Milwaukee,
+   ./biomed/1471-2180-2-22.txt:          (Milwaukee, WI).
+   Nicotinamide-adenine dinucleotide (NAD),
    ./biomed/1471-2172-3-1.txt:          were purchased from Fluka (Milwaukee, Wl). Nylon Hybond
    ./biomed/1471-2490-3-2.txt:        Electrical medical systems, Milwaukee, WI). The exposure
    ./biomed/1471-2210-2-4.txt:          purchased from Aldrich Chemical Co., Milwaukee, WI.
@@ -183,7 +185,9 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
 
    ```
    > grep -w "cysteine protease"
-   ./plos/journal.pbio.0020013.txt:        for the proteasome, in addition to “classic” cysteine protease behavior (Verma et al. 2002;
+   ./plos/journal.pbio.0020013.txt:        for the proteasome, in
+   addition to “classic” cysteine protease behavior
+   (Verma et al. 2002;
    ./biomed/1476-4598-2-25.txt:          Cathepsin B is a lysosomal cysteine protease, the
    ./biomed/1476-4598-2-25.txt:          cysteine protease. The cleavage of calpastatin by
    ./biomed/1471-2180-1-33.txt:          cysteine protease, SpeB [ 4 ] . Analysis of SpeB, SK and
@@ -199,7 +203,9 @@ I fixed it by removing only one occurrence of the smallest number. Unless the in
    ```
    > grep -w "explode"
    ./biomed/cc2190.txt:          enteral nutrition (explode) AND jejunal or post-pyloric
-   ./911report/chapter-6.txt:                hit tanks, not people. It needed to be designed to explode in a different way, and
+   ./911report/chapter-6.txt:
+   hit tanks, not people. It needed to be designed to explode in
+   a different way, and
    ```
 
 4. `grep -l`: display file names which contain line matches. This is useful when you want to find the files that include the information that you want.
