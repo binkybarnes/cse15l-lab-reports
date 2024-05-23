@@ -1,6 +1,6 @@
 # Lab Report 4 - Vim
 
-## 4
+## Step 4
 
 ### 1
 
@@ -14,7 +14,7 @@
 
 I typed in the address for the ieng6 server, and I ssh into it.
 
-## 5
+## Step 5
 
 ### 1
 
@@ -29,7 +29,7 @@ I typed in the address for the ieng6 server, and I ssh into it.
 
 Using the ssh link to the github repository, I git cloned it and changed directory to it.
 
-## 6
+## Step 6
 
 ### 1
 
@@ -43,7 +43,7 @@ Using the ssh link to the github repository, I git cloned it and changed directo
 
 I copied the javac and java commands from the writeup and pasted them into the terminal. Then I changed the ... into the test file.
 
-## 7
+## Step 7
 
 ### 1
 
@@ -58,7 +58,7 @@ I copied the javac and java commands from the writeup and pasted them into the t
 
 From the above step, I see that the line 44 failed. So I open the file with vim, go that that line, and change the index1 to index2.
 
-## 8
+## Step 8
 
 ### 1
 
@@ -72,7 +72,7 @@ From the above step, I see that the line 44 failed. So I open the file with vim,
 
 Since I had already typed those commands before, I press up arrow 3 times for each one.
 
-## 9
+## Step 9
 
 ### 1
 
